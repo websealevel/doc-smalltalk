@@ -14,6 +14,8 @@ Squeak se compose de 3 parties:
 
 La VM exécute une image Squeak au démarrage.
 
+>[Scratch](https://scratch.mit.edu/) a initialement été développé [en SmallTalk avec Squeak](https://wiki.squeak.org/squeak/5833).
+
 ## Installer Squeak
 
 Se rendre sur [le site officiel](https://squeak.org/) et [télécharger la version pour votre OS](https://squeak.org/downloads/).
@@ -42,7 +44,10 @@ Par exemple, `frame center` peut se lire "*le sélecteur `center` sans arguments
 
 **Quand une expression est évaluée, le message est transmis au *reveiver*.**
 
->There is an important distinction between "methods" and "messages". A method is a body of code, while a message is something that is sent. A method is similar to a function; in this analogy, sending a message is similar to calling a function. An expression which invokes a method is called a "message sending expression." Smalltalk terminology makes a *clear distinction between* "message" and "method", but Java and C++ terminology sometimes confuses these concepts. A message-sending expression will send a message to the object. How the object responds to the message depends on the class of the object. Objects of different classes will respond to the same message differently, since they will invoke different methods. Donc, en SmallTalk tout est du *dynamic binding*, comme si tous les objets implémentaient une interface en Java. On ne travaille qu'avec des interfaces et non des implémentations.
+>There is an important distinction between "methods" and "messages". A method is a body of code, while a message is something that is sent. A method is similar to a function; in this analogy, sending a message is similar to calling a function. An expression which invokes a method is called a "message sending expression." Smalltalk terminology makes a *clear distinction between* "message" and "method", but Java and C++ terminology sometimes confuses these concepts. A message-sending expression will send a message to the object. How the object responds to the message depends on the class of the object. Objects of different classes will respond to the same message differently, since they will invoke different methods. Donc, en SmallTalk tout est du *dynamic binding*, comme si tous les objets implémentaient une interface en Java. On ne travaille qu'avec des interfaces et non des implémentations. En effet, on lit plus loin "In the Smalltalk programming model, all binding is dynamic".
+
+
+>Smalltalk is an un-typed language (typage dynamique, *at runtime*).
 
 ~~~smalltalk
 //`frame` est le récepteur du message, `center` est le selector. On parle de *unary message*.
