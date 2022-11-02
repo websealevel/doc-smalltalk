@@ -42,6 +42,8 @@ Par exemple, `frame center` peut se lire "*le sélecteur `center` sans arguments
 
 **Quand une expression est évaluée, le message est transmis au *reveiver*.**
 
+>There is an important distinction between "methods" and "messages". A method is a body of code, while a message is something that is sent. A method is similar to a function; in this analogy, sending a message is similar to calling a function. An expression which invokes a method is called a "message sending expression." Smalltalk terminology makes a *clear distinction between* "message" and "method", but Java and C++ terminology sometimes confuses these concepts. A message-sending expression will send a message to the object. How the object responds to the message depends on the class of the object. Objects of different classes will respond to the same message differently, since they will invoke different methods. Donc, en SmallTalk tout est du *dynamic binding*, comme si tous les objets implémentaient une interface en Java. On ne travaille qu'avec des interfaces et non des implémentations.
+
 ~~~smalltalk
 //`frame` est le récepteur du message, `center` est le selector. On parle de *unary message*.
 frame center
@@ -80,6 +82,8 @@ Pour envoyer plusieurs messages au même récepteur dans la même expression on 
 >C'est intéressant comment l'expressivité du langage Smalltalk donne une autre *sensation* de ce qu'*est* un *objet*. `window offset` s'écrirait aujourd'hui dans un langage de POO `window->offset`, `window.offset()` ou `window.offset`. Dans le premier cas, le langage nous montre que `window` est une boîte noire qui reçoit un message, on le voit *depuis l'extérieur*. Dans la POO moderne, le deuxième cas, on sent qu'on part *de l'intérieur de l'objet*, que l'objet nous *expose* quelque-chose. Ça ne fait pas le même *effet* dans le cerveau, on ne *pense* pas de la même manière l'objet dans les deux cas.
 
 
+
+
 ## Ressources
 
 - [Squeak, site officiel](https://squeak.org/)
@@ -87,3 +91,4 @@ Pour envoyer plusieurs messages au même récepteur dans la même expression on 
 - [Back to the future The Story of Squeak, A Practical Smalltalk Written in Itself ](http://files.squeak.org/docs/OOPSLA.Squeak.html)
 - [Byte Magazine Volume 06 Number 08 - Smalltalk](https://archive.org/details/byte-magazine-1981-08/page/n37/mode/2up)
 - [Pharo](https://pharo.org/web/), langage/environnement/plateforme open-source purement objet, descendant direct de SmallTalk
+- [Smalltalk: A White Paper Overview](https://web.cecs.pdx.edu/~harry/musings/SmalltalkOverview.html), introduction au langage et au système SmallTalk
