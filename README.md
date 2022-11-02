@@ -4,7 +4,31 @@
 
 ## VM Squeak
 
-Squeak est une implémentation open-source, multi environnements du standard Smalltalk-80. Le code Smalltalk est hébergé sur une machine virtuelle entièrement écrite en SmallTalk, appelée Squeak. Squeak permet d'éxecuter, de débuger, d'analyser et de changer le code source (de la VM elle même !).
+Squeak est un environnement open-source, multi plateformes, descendant direct de Smalltalk-80. Le code Smalltalk est hébergé sur une machine virtuelle (VM) entièrement écrite en SmallTalk. Squeak permet d'éxecuter, de débuger, d'analyser et de changer le code source (de la VM elle même !).
+
+Squeak se compose de 3 parties:
+
+- une machine virtuelle (VM Squeak) dédiée à chaque OS
+- une image de chaque version de Squeak (`*.image`). C'est un *screenshot* de tous les objets et de tous leurs états (état complet), au format standardisé.
+- des fichiers sources de chaque image
+
+La VM exécute une image Squeak au démarrage.
+
+## Installer Squeak
+
+Se rendre sur [le site officiel](https://squeak.org/) et [télécharger la version pour votre OS](https://squeak.org/downloads/).
+
+Sur Ubuntu/Debian, décompresser l'archive et éxecuter `squeak.sh`. La VM vous demander de choisir un fichier `*.image` qui est une sauvegarde de tout l'environnement Squeak. Vous pouvez créer vos propres images et même modifier la VM.
+
+## Environnement Squeak
+
+>Tout l'environnement Squeak est écrit en SmallTalk, aussi vous pouvez vous adressez à ses composants comme à n'importe quel objet ! On peut donc envoyer un message à notre Transcript `Transcript show: 'Hello world'; cr.`, et s'adresser à notre outil de la même manière qu'à notre propre code ! 
+
+- Transcript: système utilisé pour le loggin de messages système (comme une console)
+- Workspace: comme un repo, permet de tester du code SmallTalk et de l'évaluer, ou juste d'écrire du texte (documentation, ce que vous voulez, etc.)
+
+
+## Code source
 
 ## SmallTalk
 
@@ -61,4 +85,5 @@ Pour envoyer plusieurs messages au même récepteur dans la même expression on 
 - [Squeak, site officiel](https://squeak.org/)
 - [Squeak books](https://squeak.org/documentation/)
 - [Back to the future The Story of Squeak, A Practical Smalltalk Written in Itself ](http://files.squeak.org/docs/OOPSLA.Squeak.html)
-- [Byte Magazine Volume 06 Number 08 - Smalltalk](https://archive.org/details/byte-magazine-1981-08/page/n37/mode/2up)# doc-smalltalk
+- [Byte Magazine Volume 06 Number 08 - Smalltalk](https://archive.org/details/byte-magazine-1981-08/page/n37/mode/2up)
+- [Pharo](https://pharo.org/web/), langage/environnement/plateforme open-source purement objet, descendant direct de SmallTalk
