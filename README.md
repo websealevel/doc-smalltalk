@@ -9,7 +9,7 @@ Squeak est un environnement open-source, multi plateformes, descendant direct de
 Squeak se compose de 3 parties:
 
 - une machine virtuelle (VM Squeak) dédiée à chaque OS
-- une image de chaque version de Squeak (`*.image`). C'est un *screenshot* de tous les objets et de tous leurs états (état complet), au format standardisé.
+- une image de chaque version de Squeak (`*.image`). C'est un *screenshot* de tous les objets et de tous leurs états (état complet), au format standardisé. Cette image comprend l'état de l'environnement et de votre programme. En d'autres termes, votre code source est inclus dans l'image.
 - des fichiers sources de chaque image
 
 La VM exécute une image Squeak au démarrage.
@@ -85,8 +85,6 @@ Quand des messages unaires, binaires et à mot-clef apparaissent dans la même e
 Pour envoyer plusieurs messages au même récepteur dans la même expression on utilise un point-virgule pour séparer chaque message. Par exemple `printer newLine; print: reportTitle; space; print: Date today` est une expression composée de 4 messages pour `printer`.
 
 >C'est intéressant comment l'expressivité du langage Smalltalk donne une autre *sensation* de ce qu'*est* un *objet*. `window offset` s'écrirait aujourd'hui dans un langage de POO `window->offset`, `window.offset()` ou `window.offset`. Dans le premier cas, le langage nous montre que `window` est une boîte noire qui reçoit un message, on le voit *depuis l'extérieur*. Dans la POO moderne, le deuxième cas, on sent qu'on part *de l'intérieur de l'objet*, que l'objet nous *expose* quelque-chose. Ça ne fait pas le même *effet* dans le cerveau, on ne *pense* pas de la même manière l'objet dans les deux cas.
-
-
 
 
 ## Ressources
